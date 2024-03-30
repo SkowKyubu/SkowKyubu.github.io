@@ -82,6 +82,7 @@ a.button:hover {
 /* Add space between the two buttons */
 #my-work-link {
   margin-right: 15px; /* Adjust as needed */
+  /* background-color: white; */
 }
 
 #my-resume {
