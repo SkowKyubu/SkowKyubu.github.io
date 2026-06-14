@@ -111,7 +111,8 @@ body {
     .project-card-text-container {
       flex-direction: column;
       display: flex;
-      gap: 16px
+      gap: 16px;
+      flex-grow: 1;
     }
 
     .project-image {
