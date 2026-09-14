@@ -212,6 +212,17 @@ main {
   font-size: 1.05rem;
 }
 
+.button-group .button {
+  position: relative;
+  justify-content: center;
+  min-width: 168px;
+}
+
+.button-group .icon-inline {
+  position: absolute;
+  right: 18px;
+}
+
 /* ---------- Tags ---------- */
 
 .tag-list {
