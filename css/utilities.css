@@ -1,132 +1,267 @@
+/* ==========================================================================
+   Utilities — navbar, buttons, tags, icons, footer, motion
+   ========================================================================== */
 
-/* Icons */
-
-.right-arrow-icon {
-  width: 16px;
-  height: 16px;
-  margin-top: 1px;
+/* Skip link (accessibility) */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--color-accent);
+  color: var(--color-accent-contrast);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-sm);
+  z-index: 100;
 }
 
-.footer-icon {
-  width: 20px;
-  height: 20px;
+.skip-link:focus {
+  left: var(--space-4);
+  top: var(--space-4);
 }
 
-a.icon-link {
-  transition: transform 200ms ease-in-out;
-}
-
-a.icon-link:hover {
-  cursor: pointer;
-  stroke-width: 5;
-  margin: 0;
-  transform: rotate(15deg);
-}
-
-
-/* Navbar Styling */
+/* ---------- Navbar ---------- */
 
 .navbar {
-  width: 100%;
-  padding: 30px 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
+  height: var(--nav-height);
+  z-index: 50;
+  background: color-mix(in srgb, var(--color-bg) 80%, transparent);
+  backdrop-filter: saturate(180%) blur(12px);
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--transition), box-shadow var(--transition);
 }
 
-.nav-title-link {
-  color: black;
+.navbar.scrolled {
+  border-bottom-color: var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.navbar-inner {
+  max-width: var(--container-max);
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+}
+
+.nav-brand {
+  color: var(--color-text);
   text-decoration: none;
 }
 
-.nav-title-link:hover {
-  text-decoration: underline;
+.nav-links {
+  display: flex;
+  gap: var(--space-6);
 }
 
-/* Small devices (portrait tablets and large phones, 1001px and below) */
-@media only screen and (max-width: 1001px) {
-  .navbar {
-    padding: 20px 20px;
-    background-color: white
+.nav-links a {
+  color: var(--color-muted);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--color-text);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+/* Push content below fixed navbar */
+main {
+  padding-top: var(--nav-height);
+}
+
+/* ---------- Theme toggle ---------- */
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background var(--transition), border-color var(--transition);
+}
+
+.theme-toggle:hover {
+  background: var(--color-surface);
+}
+
+/* ---------- Buttons ---------- */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 10px 18px;
+  border-radius: var(--radius-pill);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background var(--transition), color var(--transition),
+    border-color var(--transition), transform var(--transition);
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button-primary {
+  background: var(--color-accent);
+  color: var(--color-accent-contrast);
+}
+
+.button-primary:hover {
+  background: var(--color-accent-hover);
+}
+
+.button-outline {
+  background: transparent;
+  color: var(--color-text);
+  border-color: var(--color-border);
+}
+
+.button-outline:hover {
+  border-color: var(--color-text);
+}
+
+.button-lg {
+  padding: 14px 28px;
+  font-size: 1.05rem;
+}
+
+/* ---------- Tags ---------- */
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.tag-sm {
+  padding: 4px 10px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--color-muted);
+}
+
+/* ---------- Icons ---------- */
+
+.icon {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+.icon-inline {
+  width: 16px;
+  height: 16px;
+}
+
+/* Invert monochrome SVG icons in dark mode for visibility */
+[data-theme="dark"] .icon,
+[data-theme="dark"] .footer-icon {
+  filter: invert(1);
+}
+
+a.icon-link {
+  display: inline-flex;
+  transition: transform var(--transition);
+}
+
+a.icon-link:hover {
+  transform: translateY(-2px);
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+  border-top: 1px solid var(--color-border);
+  padding: var(--space-12) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.footer-socials {
+  display: flex;
+  gap: var(--space-6);
+}
+
+/* ---------- Scroll reveal animation ---------- */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 600ms ease, transform 600ms ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .project-card:hover,
+  .button:hover,
+  a.icon-link:hover {
+    transform: none;
   }
 }
 
+/* ---------- Focus visibility (accessibility) ---------- */
 
-/* Button Styling */
-
-a.button {
-  padding: 8px 16px;
-  border: 3px solid #141414;
-  border-radius: 50px;
-  color: black;
-  text-decoration: none;
-  width: fit-content;
-  display: flex;
-  gap: 5px;
-  align-items: center;
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
 }
 
-a.button:hover {
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  cursor: pointer;
-}
-
-.button-container {
-  display: flex;
-}
-
-/* Add space between the two buttons */
-#my-work-link {
-  margin-right: 15px; /* Adjust as needed */
-  /* background-color: white; */
-}
-
-#my-resume {
-  margin-left: 15px; /* Adjust as needed */
-  background-color: black;
-}
-
-#my-resume-text{
-  color: white;
-}
-
-#my-resume:hover {
-  color: white;
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  cursor: pointer;
-}
-
-
-/* Footer Styling */
-
-#footer {
-  width: 100%;
-  display: flex;
-  padding: 30px 50px;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-}
-
-/* Link Styling */
-a.no-underline {
-  text-decoration: none;
-  color: black
-}
-
-a.no-underline:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-/* Small devices (portrait tablets and large phones, 800px and below) */
-@media only screen and (max-width: 800px) {
-  #footer {
-    padding: 20px 20px;
+/* Responsive navbar */
+@media (max-width: 720px) {
+  .nav-links {
+    display: none;
   }
 }

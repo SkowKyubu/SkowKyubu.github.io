@@ -1,204 +1,498 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-
-    <link rel="icon" href="./assets/images/favicon.ico" />
-		<title>Arthur Gautier</title>
-    <meta name="description" content="A portfolio template for the Unemployables community.">
+  <head>
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<link rel="stylesheet" href="./css/layout.css">
-    <link rel="stylesheet" href="./css/typography.css">
-    <link rel="stylesheet" href="./css/utilities.css">
+    <title>Arthur Gautier — Data &amp; AI Engineer</title>
+    <meta
+      name="description"
+      content="Arthur Gautier — Data &amp; AI Engineer specializing in machine learning, data science and Generative AI. Currently Data Scientist at SCOR Singapore."
+    />
 
-		<script defer src="./js/script.js"></script>
+    <link rel="icon" href="./assets/images/favicon.ico" />
 
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-	</head>
-	<body>
+    <!-- Styles -->
+    <link rel="stylesheet" href="./css/theme.css" />
+    <link rel="stylesheet" href="./css/typography.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/utilities.css" />
 
-    <!-- Add a container for the animated background -->
-    <div id="background"></div>
+    <script defer src="./js/script.js"></script>
+  </head>
 
-    <div class="navbar">
-      <a class="nav-title-link" href="./index.html">
-        <span class="nav-title">Arthur Gautier</span>
-        <a class="button" href="mailto:artgau79@gmail.com">
-          <span class="button-text">Contact Me</span>
-        </a>
-      </a>
+  <body>
+    <!-- Skip link for accessibility -->
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    </div>
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+      <div class="navbar-inner">
+        <a class="nav-brand" href="./index.html">Arthur Gautier</a>
 
+        <nav class="nav-links" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
 
-
-
-    <!-- MAIN PAGE CONTENT -->
-    <div id="main-content">
-
-      <!-- PORTFOLIO HEADER -->
-      <div id="portfolio-header">
-        <div id="portfolio-header-image-container">
-          <img src="./assets/images/1311.svg" class="portfolio-header-image" oncontextmenu="return false;">
-        </div>
-
-
-
-        <div id="portfolio-header-text-container">
-            <div class="header-text">
-              <span class="main-title">Hey, I'm Arthur.</span>
-              <div class="body-text">I’m a Data & AI Engineer graduated from Seatech Toulon. I'm currently working as a Data Scientist at SCOR Singapore and seeking opportunities in the field of MLE & Data Science, available in January 2027.</div>
-            </div>
-
-                <div class="button-container">
-
-                  <a class="button" id="my-work-link">
-                    <span class="button-text">Check out my projects</span> 
-                    <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/ oncontextmenu="return false;">
-                  </a>
-
-                  <a class="button" id="my-resume" href="./assets/resume.pdf" download="resume.pdf" target="_blank">
-                    <span class="button-text" id="my-resume-text">Download CV</span> 
-                    <image src="./assets/icons/download.svg" class="right-arrow-icon"/ oncontextmenu="return false;">
-                  </a>  
-
-                </div>
-
+        <div class="nav-actions">
+          <button
+            class="theme-toggle"
+            id="theme-toggle"
+            type="button"
+            aria-label="Toggle dark mode"
+          >
+            <span class="theme-toggle-icon" aria-hidden="true">🌙</span>
+          </button>
+          <a class="button button-primary" href="mailto:artgau79@gmail.com">
+            Contact me
+          </a>
         </div>
       </div>
+    </header>
 
-      <!-- ABOUT SECTION -->
-      <div id="about-section">
-        <span class="subheader-text">My Background / About Me</span>
-        <div class="about-section-content">
-          <div class="body-text">
-            Greetings! I’m a Data & AI Engineer specializing in machine learning and data science. My journey combines robust academic background with extensive professional experience. Currently at SCOR, I am spearheading strategic automation and predictive modeling projects, building Generative AI pipelines and mortality risk prediction models. Previously at Covéa, I optimized electronic document management using cloud technologies like Microsoft Azure and DataBricks, reducing costs with open-source alternatives. At Bangkok University, I developed an AI-powered scanning system for product detection using computer vision. Proficient in Python, PySpark, Docker, and various ML/GenAI tools, I thrive on exploring cutting-edge data science solutions and am eager to apply my skills to future endeavors.
-	  </div>
-      </div>
+    <main id="main">
+      <!-- HERO -->
+      <section class="hero" id="top">
+        <div class="hero-text">
+          <p class="eyebrow">Data &amp; AI Engineer</p>
+          <h1 class="hero-title">Hey, I'm Arthur.</h1>
+          <p class="lead">
+            I build machine learning and Generative AI systems that turn data
+            into decisions. Currently a Data Scientist at
+            <strong>SCOR Singapore</strong>, and open to MLE &amp; Data Science
+            opportunities from <strong>January 2027</strong>.
+          </p>
 
-      <!-- PROJECTS / MY WORK SECTION -->
-      <div id="my-work-section">
-
-        <span class="subheader-text">My Work / My Projects</span>
-
-        <div class="projects-container">
-
-          <!-- PROJECT -->
-          <div class="project-card">
-            <img src="./assets/images/senscritique.png" class="project-image" oncontextmenu="return false;">
-            <div class="project-card-text-container">
-              <div class="subheader-text project-title">SensCritique Embed</div>
-              <div class="body-text project-card-text">Creation of a website widget allowing you to display your SensCritique collection.</div>
-            </div>
-            <a class="button" href="https://github.com/SkowKyubu/Senscritique-Embed" target="_blank">
-              <span class="button-text">Read More</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/ oncontextmenu="return false;">
+          <div class="button-group">
+            <a class="button button-primary" id="my-work-link" href="#projects">
+              View my projects
+              <img
+                src="./assets/icons/arrow-right_white.svg"
+                class="icon-inline"
+                alt=""
+                aria-hidden="true"
+              />
             </a>
-          </div>
-	
-          
-          <!-- PROJECT -->
-          <div class="project-card">
-            <img src="./assets/images/decision_tree.png" class="project-image" oncontextmenu="return false;">
-            <div class="project-card-text-container">
-              <div class="subheader-text project-title">Decision tree implementation</div>
-              <div class="body-text project-card-text">Implementation and evaluation of a decision tree learning algorithm for classification from scratch.</div>
-            </div>
-            <a class="button" href="https://github.com/SkowKyubu/UIB_ML_DecisionTree" target="_blank">
-              <span class="button-text">Read More</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/ oncontextmenu="return false;">
-            </a>
-          </div>
-
-          <!-- PROJECT -->
-          <div class="project-card">
-            <img src="./assets/images/bakery.png" class="project-image" oncontextmenu="return false;">
-            <div class="project-card-text-container">
-              <div class="subheader-text project-title">Bakery recognition</div>
-              <div class="body-text project-card-text">Artificial intelligence-powered scanning system dedicated to product detection (especially pastries), engineered to streamline automated vending.</div>
-            </div>
-            <a class="button" href="https://github.com/SkowKyubu/ST_P2A_ChessRecognition" target="_blank">
-              <span class="button-text">Read More</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/ oncontextmenu="return false;">
+            <a
+              class="button button-outline"
+              href="./assets/resume.pdf"
+              download="Arthur_Gautier_Resume.pdf"
+              target="_blank"
+              rel="noopener"
+            >
+              Download CV
+              <img
+                src="./assets/icons/download.svg"
+                class="icon-inline"
+                alt=""
+                aria-hidden="true"
+              />
             </a>
           </div>
 
-
-          <!-- PROJECT -->
-          <div class="project-card">
-            <img src="./assets/images/chessconverter.jpeg" class="project-image" oncontextmenu="return false;">
-            <div class="project-card-text-container">
-              <div class="subheader-text project-title">Chessboard photo converter</div>
-              <div class="body-text project-card-text">The goal of this project is to develop a solution that can transcribe in real-time a chess game played on a physical chessboard into a digital format.</div>
-            </div>
-            <a class="button" href="https://github.com/SkowKyubu/ST_P2A_ChessRecognition" target="_blank">
-              <span class="button-text">Read More</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/ oncontextmenu="return false;">
-            </a>
-          </div>
-
-
-          <!-- PROJECT -->
-          <div class="project-card">
-            <img src="./assets/images/garden_simulator.png" class="project-image" oncontextmenu="return false;">
-            <div class="project-card-text-container">
-              <div class="subheader-text project-title">Garden Simulator</div>
-              <div class="body-text project-card-text">
-                Interactive simulation video game in C++, where players are tasked with maintaining a garden through activities such as purchasing seeds and managing gardeners.</div>
-            </div>
-            <a class="button" href="https://github.com/SkowKyubu/ST_OOP_GardenSimulator" target="_blank">
-              <span class="button-text">Read More</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/ oncontextmenu="return false;">
-            </a>
-          </div>
-
-         
-
-          <!-- PROJECT -->
-          <div class="project-card">
-            <img src="./assets/images/fire.jpeg" class="project-image" oncontextmenu="return false;">
-            <div class="project-card-text-container">
-              <div class="subheader-text project-title">Optimization of an evacuation</div>
-              <div class="body-text project-card-text">The objective of this project is to identify the optimal placements for evacuation exits in a room considering its floor plans and obstacles.</div>
-            </div>
-            <a class="button" href="https://github.com/SkowKyubu/TIPE_OptimizationEvacuation" oncontextmenu="return false;" target="_blank">
-              <span class="button-text">Read More</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-            </a>
-          </div>
-
-          
+          <ul class="hero-socials" aria-label="Social links">
+            <li>
+              <a
+                class="icon-link"
+                href="https://github.com/SkowKyubu"
+                target="_blank"
+                rel="noopener"
+                aria-label="GitHub"
+              >
+                <img src="./assets/icons/github.svg" class="icon" alt="" aria-hidden="true" />
+              </a>
+            </li>
+            <li>
+              <a
+                class="icon-link"
+                href="https://www.linkedin.com/in/agtier/"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn"
+              >
+                <img src="./assets/icons/linkedin.svg" class="icon" alt="" aria-hidden="true" />
+              </a>
+            </li>
+            <li>
+              <a
+                class="icon-link"
+                href="mailto:artgau79@gmail.com"
+                aria-label="Email"
+              >
+                <img src="./assets/icons/mail.svg" class="icon" alt="" aria-hidden="true" />
+              </a>
+            </li>
+          </ul>
         </div>
-      </div>
 
-            <!-- STRAVA SECTION -->
-            <div id="about-section">
-              <span class="subheader-text">My Strava</span>
-              <div class="about-section-content">
-                <iframe height='160' width=100% frameborder='0' allowtransparency='false' scrolling='no' src='https://www.strava.com/athletes/32873428/activity-summary/f2bb205c139b74e978a249f36b0c56f9d981ebd6'></iframe>
+        <div class="hero-image">
+          <img
+            src="./assets/images/profile_picture.jpg"
+            alt="Arthur Gautier"
+            oncontextmenu="return false;"
+          />
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="section reveal" id="about">
+        <h2 class="section-title">About me</h2>
+        <div class="about-grid">
+          <div class="about-bio">
+            <p>
+              I'm a Data &amp; AI Engineer specializing in machine learning and
+              data science, combining a strong academic background with hands-on
+              professional experience.
+            </p>
+            <p>
+              At <strong>SCOR</strong> I lead strategic automation and predictive
+              modeling projects — building Generative AI pipelines and mortality
+              risk prediction models. Previously at <strong>Covéa</strong>, I
+              optimized electronic document management on Microsoft Azure and
+              Databricks, cutting costs with open-source alternatives. At
+              <strong>Bangkok University</strong>, I built an AI-powered scanning
+              system for product detection using computer vision.
+            </p>
+          </div>
+
+          <div class="skills">
+            <h3 class="skills-heading">Core skills</h3>
+            <div class="tag-list">
+              <span class="tag">Python</span>
+              <span class="tag">PySpark</span>
+              <span class="tag">Machine Learning</span>
+              <span class="tag">Generative AI</span>
+              <span class="tag">Computer Vision</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Azure</span>
+              <span class="tag">Databricks</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section class="section reveal" id="experience">
+        <h2 class="section-title">Experience</h2>
+        <ol class="timeline">
+          <li class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-head">
+                <h3 class="timeline-role">Data Scientist</h3>
+                <span class="timeline-period">Present</span>
+              </div>
+              <p class="timeline-company">SCOR — Singapore</p>
+              <p class="timeline-desc">
+                Building Generative AI pipelines and mortality risk prediction
+                models; driving strategic automation and predictive modeling.
+              </p>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-head">
+                <h3 class="timeline-role">Data Engineer</h3>
+                <span class="timeline-period">Previously</span>
+              </div>
+              <p class="timeline-company">Covéa</p>
+              <p class="timeline-desc">
+                Optimized electronic document management on Azure &amp;
+                Databricks, reducing costs with open-source alternatives.
+              </p>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-head">
+                <h3 class="timeline-role">AI Research Intern</h3>
+                <span class="timeline-period">Earlier</span>
+              </div>
+              <p class="timeline-company">Bangkok University</p>
+              <p class="timeline-desc">
+                Developed an AI-powered scanning system for product detection
+                using computer vision.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- PROJECTS -->
+      <section class="section reveal" id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+          <!-- PROJECT -->
+          <article class="project-card">
+            <div class="project-image-wrap">
+              <img
+                src="./assets/images/senscritique.png"
+                class="project-image"
+                alt="SensCritique Embed project"
+                loading="lazy"
+                oncontextmenu="return false;"
+              />
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">SensCritique Embed</h3>
+              <p class="project-desc">
+                A website widget that lets you display your SensCritique
+                collection.
+              </p>
+              <div class="tag-list">
+                <span class="tag tag-sm">JavaScript</span>
+                <span class="tag tag-sm">Web</span>
               </div>
             </div>
+            <a
+              class="project-link"
+              href="https://github.com/SkowKyubu/Senscritique-Embed"
+              target="_blank"
+              rel="noopener"
+            >
+              Read more
+              <img src="./assets/icons/arrow-right.svg" class="icon-inline" alt="" aria-hidden="true" />
+            </a>
+          </article>
 
-    </div>
+          <!-- PROJECT -->
+          <article class="project-card">
+            <div class="project-image-wrap">
+              <img
+                src="./assets/images/decision_tree.png"
+                class="project-image"
+                alt="Decision tree implementation project"
+                loading="lazy"
+                oncontextmenu="return false;"
+              />
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Decision Tree Implementation</h3>
+              <p class="project-desc">
+                Implementation and evaluation of a decision tree learning
+                algorithm for classification, from scratch.
+              </p>
+              <div class="tag-list">
+                <span class="tag tag-sm">Python</span>
+                <span class="tag tag-sm">Machine Learning</span>
+              </div>
+            </div>
+            <a
+              class="project-link"
+              href="https://github.com/SkowKyubu/UIB_ML_DecisionTree"
+              target="_blank"
+              rel="noopener"
+            >
+              Read more
+              <img src="./assets/icons/arrow-right.svg" class="icon-inline" alt="" aria-hidden="true" />
+            </a>
+          </article>
 
-    
+          <!-- PROJECT -->
+          <article class="project-card">
+            <div class="project-image-wrap">
+              <img
+                src="./assets/images/bakery.png"
+                class="project-image"
+                alt="Bakery recognition project"
+                loading="lazy"
+                oncontextmenu="return false;"
+              />
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Bakery Recognition</h3>
+              <p class="project-desc">
+                AI-powered scanning system for product detection (pastries),
+                engineered to streamline automated vending.
+              </p>
+              <div class="tag-list">
+                <span class="tag tag-sm">Computer Vision</span>
+                <span class="tag tag-sm">Deep Learning</span>
+              </div>
+            </div>
+            <a
+              class="project-link"
+              href="https://github.com/SkowKyubu/ST_P2A_ChessRecognition"
+              target="_blank"
+              rel="noopener"
+            >
+              Read more
+              <img src="./assets/icons/arrow-right.svg" class="icon-inline" alt="" aria-hidden="true" />
+            </a>
+          </article>
+
+          <!-- PROJECT -->
+          <article class="project-card">
+            <div class="project-image-wrap">
+              <img
+                src="./assets/images/chessconverter.jpeg"
+                class="project-image"
+                alt="Chessboard photo converter project"
+                loading="lazy"
+                oncontextmenu="return false;"
+              />
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Chessboard Photo Converter</h3>
+              <p class="project-desc">
+                Real-time transcription of a physical chess game into a digital
+                format from a photo.
+              </p>
+              <div class="tag-list">
+                <span class="tag tag-sm">Computer Vision</span>
+                <span class="tag tag-sm">Python</span>
+              </div>
+            </div>
+            <a
+              class="project-link"
+              href="https://github.com/SkowKyubu/ST_P2A_ChessRecognition"
+              target="_blank"
+              rel="noopener"
+            >
+              Read more
+              <img src="./assets/icons/arrow-right.svg" class="icon-inline" alt="" aria-hidden="true" />
+            </a>
+          </article>
+
+          <!-- PROJECT -->
+          <article class="project-card">
+            <div class="project-image-wrap">
+              <img
+                src="./assets/images/garden_simulator.png"
+                class="project-image"
+                alt="Garden Simulator project"
+                loading="lazy"
+                oncontextmenu="return false;"
+              />
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Garden Simulator</h3>
+              <p class="project-desc">
+                Interactive simulation game in C++ where players maintain a
+                garden — buying seeds and managing gardeners.
+              </p>
+              <div class="tag-list">
+                <span class="tag tag-sm">C++</span>
+                <span class="tag tag-sm">OOP</span>
+              </div>
+            </div>
+            <a
+              class="project-link"
+              href="https://github.com/SkowKyubu/ST_OOP_GardenSimulator"
+              target="_blank"
+              rel="noopener"
+            >
+              Read more
+              <img src="./assets/icons/arrow-right.svg" class="icon-inline" alt="" aria-hidden="true" />
+            </a>
+          </article>
+
+          <!-- PROJECT -->
+          <article class="project-card">
+            <div class="project-image-wrap">
+              <img
+                src="./assets/images/fire.jpeg"
+                class="project-image"
+                alt="Evacuation optimization project"
+                loading="lazy"
+                oncontextmenu="return false;"
+              />
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Evacuation Optimization</h3>
+              <p class="project-desc">
+                Identifying optimal placements for evacuation exits in a room,
+                given its floor plan and obstacles.
+              </p>
+              <div class="tag-list">
+                <span class="tag tag-sm">Optimization</span>
+                <span class="tag tag-sm">Simulation</span>
+              </div>
+            </div>
+            <a
+              class="project-link"
+              href="https://github.com/SkowKyubu/TIPE_OptimizationEvacuation"
+              target="_blank"
+              rel="noopener"
+            >
+              Read more
+              <img src="./assets/icons/arrow-right.svg" class="icon-inline" alt="" aria-hidden="true" />
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <!-- BEYOND CODE / STRAVA -->
+      <section class="section reveal" id="beyond">
+        <h2 class="section-title">Beyond code</h2>
+        <p class="section-subtitle">When I'm not building models, I'm running.</p>
+        <div class="strava-embed">
+          <iframe
+            title="Strava activity summary"
+            height="160"
+            width="100%"
+            frameborder="0"
+            allowtransparency="false"
+            scrolling="no"
+            src="https://www.strava.com/athletes/32873428/activity-summary/f2bb205c139b74e978a249f36b0c56f9d981ebd6"
+          ></iframe>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="section section-contact reveal" id="contact">
+        <h2 class="section-title">Let's work together</h2>
+        <p class="section-subtitle">
+          Open to MLE &amp; Data Science opportunities from January 2027. Feel
+          free to reach out.
+        </p>
+        <a class="button button-primary button-lg" href="mailto:artgau79@gmail.com">
+          Get in touch
+        </a>
+      </section>
+    </main>
 
     <!-- FOOTER -->
-    <div id="footer">
-      <!-- GITHUB-->
-      <a class="icon-link" target="_blank" href="https://github.com/SkowKyubu">
-        <image src="./assets/icons/github.svg" class="footer-icon"/>
-      </a>
-      <!-- LINKEDIN -->
-      <a class="icon-link" target="_blank" href="https://www.linkedin.com/in/agtier/">
-        <image src="./assets/icons/linkedin.svg" class="footer-icon"/>
-      </a>
-      <!-- MAIL-->
-      <a class="icon-link" href="mailto:artgau79@gmail.com">
-        <image src="./assets/icons/mail.svg" class="footer-icon"/>
-      </a>
-    </div>
-
-	</body>
+    <footer class="footer">
+      <div class="footer-socials">
+        <a
+          class="icon-link"
+          target="_blank"
+          rel="noopener"
+          href="https://github.com/SkowKyubu"
+          aria-label="GitHub"
+        >
+          <img src="./assets/icons/github.svg" class="icon" alt="" aria-hidden="true" />
+        </a>
+        <a
+          class="icon-link"
+          target="_blank"
+          rel="noopener"
+          href="https://www.linkedin.com/in/agtier/"
+          aria-label="LinkedIn"
+        >
+          <img src="./assets/icons/linkedin.svg" class="icon" alt="" aria-hidden="true" />
+        </a>
+        <a class="icon-link" href="mailto:artgau79@gmail.com" aria-label="Email">
+          <img src="./assets/icons/mail.svg" class="icon" alt="" aria-hidden="true" />
+        </a>
+      </div>
+      <p class="footer-copy">
+        © <span id="year"></span> Arthur Gautier. Built with HTML, CSS &amp; JS.
+      </p>
+    </footer>
+  </body>
 </html>
