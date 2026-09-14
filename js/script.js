@@ -22,8 +22,12 @@
   const applyTheme = (theme) => {
     root.setAttribute("data-theme", theme);
     if (toggle) {
-      const icon = toggle.querySelector(".theme-toggle-icon");
-      if (icon) icon.textContent = theme === "dark" ? "☀️" : "🌙";
+      const isDark = theme === "dark";
+      toggle.setAttribute("aria-pressed", String(isDark));
+      toggle.setAttribute(
+        "aria-label",
+        isDark ? "Activate light mode" : "Activate dark mode"
+      );
     }
   };
 
@@ -46,6 +50,35 @@
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
+  }
+
+  // ---- Mobile navigation ----
+  const menuToggle = document.getElementById("menu-toggle");
+  const mobileNav = document.getElementById("mobile-nav");
+
+  if (menuToggle && mobileNav) {
+    const closeMobileNav = () => {
+      mobileNav.classList.remove("is-open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Open navigation menu");
+    };
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = mobileNav.classList.toggle("is-open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+      );
+    });
+
+    mobileNav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeMobileNav);
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 720) closeMobileNav();
+    });
   }
 
   // ---- Scroll reveal ----

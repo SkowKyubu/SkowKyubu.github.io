@@ -51,14 +51,39 @@
             id="theme-toggle"
             type="button"
             aria-label="Toggle dark mode"
+            aria-pressed="false"
           >
-            <span class="theme-toggle-icon" aria-hidden="true">🌙</span>
+            <span class="theme-toggle-icon" aria-hidden="true"></span>
           </button>
-          <a class="button button-primary" href="mailto:artgau79@gmail.com">
-            Contact me
+          <a class="button button-primary nav-contact" href="mailto:artgau79@gmail.com">
+            <img
+              src="./assets/icons/mail.svg"
+              class="icon-inline"
+              alt=""
+              aria-hidden="true"
+            />
+            <span>Contact me</span>
           </a>
+          <button
+            class="menu-toggle"
+            id="menu-toggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-controls="mobile-nav"
+            aria-expanded="false"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </button>
         </div>
       </div>
+      <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </header>
 
     <main id="main">
